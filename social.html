@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="ъуъ.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>!!FREE SOCIAL CREDIT!!</title>
+</head>
+<body>
+<div id="sidebar">
+    <div class="toggle-btn" onclick="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul>
+        <li><a href="hi.html">Hey</a></li>
+        <li><a href="memes.html">Memes</a></li>
+        <li><a href="cringe.html">Cringe</a></li>
+        <li><a href="social.html">Free social credit</a></li>
+    </ul>
+</div>
+<div class="gg">
+    <div id="free" onclick="soundClick()" style="display:block">FREE SOCIAL CREDIT</div>
+    <img src="social-credit.jpg" id="img_1" style="display:none">
+    <img src="blin.jpg" id="img_2" style="display:none">
+</div>
+<script>
+    function openMenu() {
+        document.getElementById("sidebar").classList.toggle('active');
+    }
+
+    var flag = 1;
+    function soundClick() {
+        if (flag <= 5) {
+            var audio = new Audio();
+            audio.src = "fnaf-hooray.mp3";
+            audio.autoplay = true;
+
+            let elem = document.getElementById('img_1');
+            let style = getComputedStyle(elem);
+            if (style.display === 'none') {
+                document.getElementById('img_1').style.display='block';
+                document.getElementById('free').style.display='none';
+                timer = setTimeout(function () {
+                    let timeMinute = 3;
+                    if (timeMinute <= 3) {
+                        document.getElementById('img_1').style.display='none';
+                        document.getElementById('free').style.display='block';
+                    }
+                    --timeMinute;
+                }, 1000)
+            }
+            ++flag;
+        } else if (flag >= 5) {
+            var audio = new Audio();
+            audio.src = "social-credit-music.mp3";
+            audio.autoplay = true;
+            audio.loop = true;
+
+            var audio = new Audio();
+            audio.src = "999-social-credit-siren.mp3";
+            audio.autoplay = true;
+            audio.loop = true;
+
+            var audio = new Audio();
+            audio.src = "sus-rock.mp3";
+            audio.autoplay = true;
+            audio.loop = true;
+
+            document.getElementById('img_2').style.display='block';
+            document.getElementById('free').style.display='none';
+        }
+    }
+</script>
+</body>
+</html>
