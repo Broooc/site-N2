@@ -231,3 +231,8 @@
         height: 1000px;
     }
 }
+
+.img {
+    padding: 40px;
+    border-radius: 2em;
+}
